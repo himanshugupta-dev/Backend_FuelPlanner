@@ -17,7 +17,7 @@ export class TemplateRenderer {
   private readonly partialsDir: string;
   private readonly cache = new Map<string, string>();
 
-  constructor(baseDir: string = path.join(__dirname, 'templates')) {
+  constructor(baseDir: string = path.join(process.cwd(), 'src', 'mail', 'templates')) {
     this.templatesDir = baseDir;
     this.partialsDir = path.join(baseDir, 'partials');
   }
